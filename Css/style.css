@@ -1,0 +1,470 @@
+*{
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+body{
+    overflow-x: hidden;
+}
+h1{
+    font-family: "Pacifico";
+}
+p{
+    font-family: "Quicksand";
+}
+/* banner*/
+div#background{
+    background-image: url(../img/GRID.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 550px;
+    position: relative;
+}
+
+div#logo{
+    background-image: url(../img/Logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    margin-top: 5px;
+    margin-left: 10px;
+    position: absolute;
+    transition: 0.3s ease;
+}
+div#logo:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(1px 1px 4px gray);
+}
+
+ul{
+    font-family: "quicksand";
+    display: flex;
+    justify-content: end;
+}
+a.nav{  
+    display: block;
+    text-decoration: none;
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 12px;
+    color: black;
+    font-weight: 600;
+    margin-right: 30px;
+    transition: 0.3s ease;
+}
+a.nav:hover { 
+    color: #FF6E92;
+    transform: scale(1.2);
+    filter: drop-shadow(1px 1px 2px gray);
+}
+div#center-learn{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 450px;
+}
+div#learn-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF6E92;
+    border-radius: 10px;
+    width: 200px;
+    height: 65px;
+    margin-left: 25px;
+    margin-top: 80px;
+    position: relative;
+    transition: 0.3s ease;
+}
+div#learn-more:hover{
+    background-color: #8D9F75;
+    transform: scale(1.1);
+    filter: drop-shadow(1px 1px 4px gray);
+}
+a#learn{
+    color: #ffffff;
+    font-family: "quicksand";
+    font-weight: 100;
+    font-size: 30px;
+    text-decoration: none;
+}
+div#sterren-1{
+    background-image: url(../img/sterren-pink.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -43px;
+    right: -30px;
+    animation: spin 0.6 ease;
+}
+/* end banner */
+/* divider */
+div.center-divider{
+    display: flex;
+    justify-content: center;
+}
+div#divider1,
+div#divider2,
+div#divider3,
+div#divider4{
+    width: 98vw;
+    height: 25px;
+    background-color: #AEC194;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* end divider */
+/* expanding divs */
+
+article#onderwerp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+div.center{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    gap: 50px;
+    height: 750px;
+}
+div.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 30vw;
+    height: 700px;
+    border-radius: 50px;
+    background-color: #F4CEDB;
+    transition: 0.6s ease;
+    position: relative;
+}
+a#here{
+    text-decoration: none;
+    color: #d35675;
+}
+a#here:hover{
+    color: #8D9F75;
+}
+
+div.box:hover {
+    flex: 1.5;
+}
+div.box::before:not(:hover){
+    filter: grayscale(0%);
+}
+div.box:not(:hover){
+    filter: grayscale(50%);
+}
+div.box:not(:hover) > div#sterren-2,
+div#sterren-2{
+    width: 80px;
+    height: 80px;
+}
+
+div.box > h1 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    transition: 0.6s ease;
+    flex-grow: 1;
+}
+
+div.box > p {
+    color: white;
+    width: 18vw;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px ;
+    transition: 0.6s ease;
+    flex-grow: 1;
+    line-height: 35px;
+}
+div.box:hover > p {
+    font-size: 30px;
+}
+div.box:hover > h1{
+    font-size: 50px;
+    color: #FF6E92;
+}
+div#sterren-2{
+    background-image: url(../img/sterren-yellow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    bottom: 10px;
+    left: 20px;
+    transition: 0.6s ease;
+}
+div.box:hover > div#sterren-2{
+    width: 170px;
+    height: 170px;
+    animation: spin 1s;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+div.box:nth-of-type(2){
+    position: relative;
+}
+div.box:nth-of-type(2) > p{
+    font-size: 30px;
+    width: 28vw;
+    margin-top: 10px;
+}
+img#beatopia{
+    border-radius: 10px;
+    width: 350px;
+    transition: 0.6s ease;
+}
+p#Beatopia{
+    margin-top: 20px;
+    font-size: 25px;
+}
+div.box:nth-of-type(2):hover > img#beatopia{
+    width: 400px;
+}
+div#sterren-3{
+    background-image: url(../img/sterren-hotpink.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -35px;
+    left: -20px;
+    transition: 0.6s ease;
+}
+div.box:hover > div#sterren-3{
+    width: 130px;
+    height: 130px;
+    animation: spin 1s ease;
+}
+
+div.box:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+iframe{
+    width: 22vw;
+    height: 220px;
+    border-radius: 30px;
+    transition: 0.6s ease;
+    padding: 10px;
+}
+div.box:nth-of-type(3):hover > iframe{
+    width: 30vw;
+}
+div.box:nth-of-type(3) > p{
+    margin-top: 40px;
+    transition: 0.6s ease;
+}
+div.box:nth-of-type(3):hover{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+div#sterren-4{
+    background-image: url(../img/sterren-yellow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -35px;
+    right: -30px;
+    transition: 0.6s ease;
+}
+div.box:hover > div#sterren-4{
+    width: 130px;
+    height: 130px;
+    animation: spin 1s ease;
+}
+a#more-about-me{
+    text-decoration: none;
+    color: white;
+    font-family: "Quicksand";
+    display: block;
+    width: 250px;
+    font-size: 25px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+    background-color: #FF6E92;
+    border-radius: 30px;
+    transition: 0.6s ease;
+}
+a#more-about-me:hover{
+    transform: scale(1.1);
+    background-color: #FFB8D0;
+
+}
+
+/* end expanding divs */
+/* start subscribe with email */
+article#subscribe{
+    margin-top: 150px;
+    display: flex;
+    flex-direction:column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    height: 600px;
+}
+article#subscribe > h1{
+    color: #FFB8D0;
+    font-size: 60px;
+    display: block;
+    margin-bottom: 100px;
+}
+article#subscribe > p{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+article#subscribe > input[type=email]{
+    width: 70%;
+    height: 70px;
+    border: 3px #FF6E92 solid;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: "quicksand";
+    font-size: 30px;
+    text-align: center;
+    outline: 0;
+}
+article#subscribe > input[value]{
+    color: gray;
+}
+article#subscribe > button{
+    margin-top: 50px;
+    width: 30%;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #FF6E92;
+    color: white;
+    font-size: 30px;
+    font-family: "Quicksand";
+    transition: 0.6s ease;
+}
+article#subscribe > button:hover{
+    transform: scale(1.1);
+    background-color: #F4CEDB;
+}
+article#subscribe > div#sterren-5{
+    background-image: url(../img/sterren-pink.png);
+    background-size: cover;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 200px;
+    bottom: 330px;
+    transition: 0.6s ease;
+}
+button:hover div#sterren-5 {
+    animation: spin ease 1s;
+    width: 130px;
+    height: 130px;
+}
+/* end subscribe with email */
+/* start about me */
+article#about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+    margin-bottom: 100px;
+}
+div#picture{
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 700px;
+    height: 700px;
+    background-color: #F4CEDB;
+    z-index: 2; 
+    position: absolute;
+    right:63%;
+    display: flex;
+    justify-content: center;
+}
+div#text{
+    z-index: 1;
+    background-color: #F2EADD;
+    display: block;
+    width: 80%;
+    position: absolute;
+    right: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 600px;
+    border-radius: 100px;
+    color: #FF6F92;
+}
+div#text > p{
+    font-size: 25px;
+    padding-left: 200px;
+    width: 500px;
+}
+div#text > h1{
+    padding-left: 200px;
+    font-size: 70px;
+    margin-bottom: 50px;
+}
+div#sterren6{
+    background-image: url(../img/sterren-hotpink.png);
+    position: absolute;
+    background-size: cover;
+}
+/* end about me */
+footer{
+    background-color: #AEC194;
+    width: 100%;
+    height: 300px;
+    z-index: 3;
+}
+
+img.socials{
+    height: 40px;
+}
+
+
+div#inner-footer{
+    background-color: #8D9E77;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* https://css-tricks.com/css-only-carousel/ 
+            GEBRUIK DEZE*/
